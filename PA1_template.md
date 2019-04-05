@@ -48,7 +48,7 @@ stepsByInterval <- aggregate(steps ~ interval, activityData, mean, na.rm = TRUE)
 plot(stepsByInterval$interval, stepsByInterval$steps, type = "l", main = "Average Number of Steps Taken Across All Day", xlab = "Interval", ylab = "Average Number of Steps")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](Figure/unnamed-chunk-4-1.png)
 
 2.  Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -105,7 +105,7 @@ stepsPerDayNew <- tapply(activityDataNew$steps, activityDataNew$date, sum)
 qplot(stepsPerDayNew, binwidth = 1500) + xlab("Steps") + ylab("Frequency") + ggtitle("Total Number of Steps Taken Each Day (Imputed)")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](Figure/unnamed-chunk-8-1.png)
 
 ``` r
 mean(stepsPerDayNew)
@@ -138,4 +138,4 @@ qplot(interval, steps, data = finalData, geom=c("line"), xlab = "Interval", ylab
   facet_wrap(~ dateType, ncol = 1)
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](Figure/unnamed-chunk-10-1.png)
